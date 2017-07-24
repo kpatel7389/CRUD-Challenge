@@ -1,0 +1,17 @@
+<h1>Welcome <%= @user.first_name %></h1>
+
+<h2>User Information</h2>
+
+<ul>
+  <li>First Name: <%= @user.first_name %></li>
+  <li>Last Name: <%= @user.last_name %></li>
+  <li>Email: <%= @user.email %></li>
+</ul>
+
+<h2>Subscriptions</h2>
+<ul>
+  <% @channels.each do |channel| %>
+    <li><a href="/channels/<%= channel.id %>"><%= channel.name %></a></li>
+  <% end %>
+  <li>Total Price per Month: $<%= @price %></li>
+</ul>

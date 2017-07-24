@@ -1,0 +1,7 @@
+<h1>Channels Site</h1>
+
+<ul>
+  <% @channels.each do |channel| %>
+  <li><a href="/channels/<%= channel.id %>"><%= channel.name %>, <%= channel.callsign %>, <%= channel.price_per_month %></li>
+  <% end %>
+</ul>
